@@ -5,24 +5,24 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.29.2"
+  version "0.29.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.2/undistro_0.29.2_darwin_amd64.tar.gz"
-    sha256 "ada3967ce895ab2d16bbf5630c52f48310f44af8d0f960a6572c8e5b82a6225b"
+    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.3/undistro_0.29.3_darwin_amd64.tar.gz"
+    sha256 "38248afe6a49c4b239c3efc798cb596ea8d6ed9320bfcb619ec12f6fe6ecd5e8"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.2/undistro_0.29.2_darwin_arm64.tar.gz"
-    sha256 "8dcbdee44d56f495d1cdd5b996630e58283a2c297a6bfc16d496bfb2737a973d"
+    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.3/undistro_0.29.3_darwin_arm64.tar.gz"
+    sha256 "82a0329b37e53cb7ce47ea78dbffeb95ae22276bb0fa57ef5c9e5503a87e0ed4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.2/undistro_0.29.2_linux_amd64.tar.gz"
-    sha256 "ad86f5c71fd500f77a8bc7a4c63b9f1ee54ed29161b597fd5c34ae4abfd92df0"
+    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.3/undistro_0.29.3_linux_amd64.tar.gz"
+    sha256 "c904eeb3466080eb332896cbeb21749df5c35b6092ffd7e6c8e3f7392703b18b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.2/undistro_0.29.2_linux_arm64.tar.gz"
-    sha256 "e85509e0e744f7a301460fd708ecd5695c8cdcdb62da2cbcabd07e6f9a1cd23d"
+    url "https://github.com/getupio-undistro/undistro/releases/download/v0.29.3/undistro_0.29.3_linux_arm64.tar.gz"
+    sha256 "83d5e33f815f1a54daf3a3537753e5c69053eabb3d7816ac0990792340403920"
   end
 
   def install
