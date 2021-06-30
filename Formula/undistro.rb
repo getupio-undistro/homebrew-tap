@@ -5,24 +5,29 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.30.0"
+  version "0.30.1"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.0/undistro_0.30.0_darwin_amd64.tar.gz"
-    sha256 "bf984c0057d2b6218943fcb980bf8d4cb977baefb96af43feb5a9b62bc9b2cae"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.1/undistro_0.30.1_darwin_amd64.tar.gz"
+      sha256 "d8dff33091c6670db3ee407c245754bbdddb32f2fe4d215dbfa81318d8fe9535"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.1/undistro_0.30.1_darwin_arm64.tar.gz"
+      sha256 "8667acc22cd9e0297ec18446328edc9e759d8a29f49c9be9639a165bed1cc316"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.0/undistro_0.30.0_darwin_arm64.tar.gz"
-    sha256 "2734ee26154e7c8c38eae3b57fdd3d235e2c4c8836f307a76d08ac90e698c415"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.0/undistro_0.30.0_linux_amd64.tar.gz"
-    sha256 "1768a31855fee714b8e15d5e08a761dcd4ff68c2e6ee4c61f0208e2c61b713f0"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.0/undistro_0.30.0_linux_arm64.tar.gz"
-    sha256 "b8a257ff25a7e5d8bcfe789bea8be1a2192a18bdc804e7556b56276e9648f8d8"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.1/undistro_0.30.1_linux_amd64.tar.gz"
+      sha256 "c82866c6b84e4577ec17ce926ef8327336cf21fc1a3c759b4d9689fc2cb776c6"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.30.1/undistro_0.30.1_linux_arm64.tar.gz"
+      sha256 "c4ba3e66c378f70ecf4215d354234ce2926f5ec1488839563f14cf4472b3d025"
+    end
   end
 
   def install
