@@ -5,28 +5,28 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.31.2"
+  version "0.31.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.2/undistro_0.31.2_darwin_amd64.tar.gz"
-      sha256 "d4fed588444592245f7a00f029d3fdc23273a65ada70419262938bf67713fb81"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_darwin_amd64.tar.gz"
+      sha256 "e1a15b066a30a8b17ab992cc05ca09ca1f6562fb5a0f1c8c74b8912d36fd92e8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.2/undistro_0.31.2_darwin_arm64.tar.gz"
-      sha256 "0555a2670fa90e781281962e32b0efc6be459e9ad3e65172732dd5e5d4d04ab0"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_darwin_arm64.tar.gz"
+      sha256 "ad5e970419a432d73a09d921a4675778961452e5b1c20121c85475491a5354b4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.2/undistro_0.31.2_linux_amd64.tar.gz"
-      sha256 "e03e26a4f27107f5450a4d8fd34d4cf6b4353a1f91c73ea0c4a4ea8230280a63"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_linux_amd64.tar.gz"
+      sha256 "ce688c4114d4dd0d127db9e0ef1ce641121796197c72a3566f319b335f01c2b8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.2/undistro_0.31.2_linux_arm64.tar.gz"
-      sha256 "0b0fbe1e28c00804c06b5b2d1992cbbc4b8e159c44fac3c275fe803325a44863"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_linux_arm64.tar.gz"
+      sha256 "35ea1b33f2687a21d2918c73606ef88bf796af9fe6831ef02e221d080b4a37e8"
     end
   end
 
