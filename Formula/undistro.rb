@@ -5,30 +5,32 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.31.3"
+  version "0.31.4"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_darwin_amd64.tar.gz"
-      sha256 "e1a15b066a30a8b17ab992cc05ca09ca1f6562fb5a0f1c8c74b8912d36fd92e8"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.4/undistro_0.31.4_darwin_amd64.tar.gz"
+      sha256 "9b8e36d1a8462b36d84d69d1d78183ee80f34456f6b374bf7783d0494d0504eb"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_darwin_arm64.tar.gz"
-      sha256 "ad5e970419a432d73a09d921a4675778961452e5b1c20121c85475491a5354b4"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.4/undistro_0.31.4_darwin_arm64.tar.gz"
+      sha256 "4d92662182c2456a6a519c99b1a0cff4e4b75f6051d2eab4ab9395f8a04240f1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_linux_amd64.tar.gz"
-      sha256 "ce688c4114d4dd0d127db9e0ef1ce641121796197c72a3566f319b335f01c2b8"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.4/undistro_0.31.4_linux_amd64.tar.gz"
+      sha256 "8d488c3a6de46a9ad4251316feb40e676101b73accc8c338af5f2053fd2161d4"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.3/undistro_0.31.3_linux_arm64.tar.gz"
-      sha256 "35ea1b33f2687a21d2918c73606ef88bf796af9fe6831ef02e221d080b4a37e8"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.31.4/undistro_0.31.4_linux_arm64.tar.gz"
+      sha256 "ebb0b869bffb9c559ee241d9367eded100869103339616efcfe69a9b9a9bd859"
     end
   end
+
+  depends_on "nss"
 
   def install
     bin.install "undistro"
