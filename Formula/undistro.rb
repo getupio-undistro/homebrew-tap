@@ -5,28 +5,28 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.36.0"
+  version "0.36.1"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.0/undistro_0.36.0_darwin_arm64.tar.gz"
-      sha256 "3fade482695a3c3767222940eb19e5a28b302c426550ff4f99c65fc5b912a411"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.0/undistro_0.36.0_darwin_amd64.tar.gz"
-      sha256 "23a646fdff4992950520a576c4f10984056e59b5a60b738221c02608df03adee"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.1/undistro_0.36.1_darwin_amd64.tar.gz"
+      sha256 "cdc0bcd30747d808ba0bdb9727968c7c6b22ee407bafc717e90f19820fa45dfc"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.1/undistro_0.36.1_darwin_arm64.tar.gz"
+      sha256 "7b7df52813abec0945751eb1e9371f84da3a3e5b0aec2b8203c24d0ab3798ebd"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.0/undistro_0.36.0_linux_amd64.tar.gz"
-      sha256 "00ee6c0790734d0f968647fba327c2a6eefef86e59dc7aa1a628bb1a6e23a2ec"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.0/undistro_0.36.0_linux_arm64.tar.gz"
-      sha256 "b90429d703c8973cf533d4d9ac11811879a35d6571b624715f737f3e2d016570"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.1/undistro_0.36.1_linux_arm64.tar.gz"
+      sha256 "f9443c487425f969b99830bd5aa14b635a189a222b2a8c3d4b7fff090cc4b0ed"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.1/undistro_0.36.1_linux_amd64.tar.gz"
+      sha256 "0ab1e9e717183df74b054a8fe40334f24339ea3c71a3369bac99e587c9a128de"
     end
   end
 
