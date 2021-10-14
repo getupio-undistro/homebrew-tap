@@ -5,28 +5,28 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.36.3"
+  version "0.36.4"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.3/undistro_0.36.3_darwin_amd64.tar.gz"
-      sha256 "db39fc71aa5eae7b274ca3583e16ebd77f14d43282c675e6432813c7f7d5a269"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.3/undistro_0.36.3_darwin_arm64.tar.gz"
-      sha256 "d73d3999299ce0979a535e7e18f0bcd1b3af0fc794bb7b6a48b46efb214b2006"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.4/undistro_0.36.4_darwin_arm64.tar.gz"
+      sha256 "2c0418c59cc2cf2122ee5e751a7479c6d5f09c36a21c7f21f9d776721cc18d60"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.4/undistro_0.36.4_darwin_amd64.tar.gz"
+      sha256 "afa6f4ae79fed4fb4d50ed277265d6f63794afaee7cb79f80e99322a4c0d792e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.3/undistro_0.36.3_linux_arm64.tar.gz"
-      sha256 "c4d3ed43f25d93ce1fc789f5d6ad3b458b7b38279e468d4cdb3aba486e31e8e3"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.4/undistro_0.36.4_linux_arm64.tar.gz"
+      sha256 "f4ec9e6dd1985ec94c783f48ec76e0254b782595a1f63e49d60513537ee4c6a7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.3/undistro_0.36.3_linux_amd64.tar.gz"
-      sha256 "e222e53a744c646ac9eeccc9e3104176b47fbb534d963ef1d4422b573c797da5"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.4/undistro_0.36.4_linux_amd64.tar.gz"
+      sha256 "58487facec680898dbc682c9b2d146c2f6873aa1a301d3e3b0a10fff123b4332"
     end
   end
 
