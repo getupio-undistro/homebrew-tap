@@ -5,28 +5,28 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.36.7"
+  version "0.36.8"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.7/undistro_0.36.7_darwin_amd64.tar.gz"
-      sha256 "60260a090b69926cc7c882506f0fc5a982c8269c53a21a25ee79e82524cefeb9"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.7/undistro_0.36.7_darwin_arm64.tar.gz"
-      sha256 "533824353af7613f83643b82c27c83484e239f433538920017489fc1508cc463"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.8/undistro_0.36.8_darwin_arm64.tar.gz"
+      sha256 "ed168961f20ce9039402adaa8853e8ddb85e050972e203672f330a071d4399e8"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.8/undistro_0.36.8_darwin_amd64.tar.gz"
+      sha256 "da0c8c72ab67fb4c2550c4a219feea487b5b893acb28ed0a9bb7a249fc90ab0d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.7/undistro_0.36.7_linux_amd64.tar.gz"
-      sha256 "facd06af4233be9ac48e016618a87972c6df601ec4061f15ed0d381cb7c1a724"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.8/undistro_0.36.8_linux_amd64.tar.gz"
+      sha256 "4adbd0ccf8955e98aba7a3d1ba54bea74c0932bd62e76359090b0c67b7624de9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.7/undistro_0.36.7_linux_arm64.tar.gz"
-      sha256 "9d53bd0bb46bf13cdc2a2e53127319d582ac64611feb6b2b7d54d40c34a69c54"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.8/undistro_0.36.8_linux_arm64.tar.gz"
+      sha256 "040365bbf73468e4f0615f0127e938cf8926a62330fbe62f7b4279c508466227"
     end
   end
 
