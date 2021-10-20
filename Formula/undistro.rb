@@ -5,28 +5,28 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.36.11"
+  version "0.36.12"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.11/undistro_0.36.11_darwin_amd64.tar.gz"
-      sha256 "bc0124dcbd689f699837ac255c0a28d8bcb1290a8206cd61c7715ab616108e2e"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.11/undistro_0.36.11_darwin_arm64.tar.gz"
-      sha256 "a94564888fc84722e01fc5da3e68a19131739ad9255e85f5cfd8961d8283c142"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_darwin_arm64.tar.gz"
+      sha256 "4e00ca7339b393dde5abf972a49dc34a2b8916321eddf8b83613a0d60ecfb7d4"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_darwin_amd64.tar.gz"
+      sha256 "1a09dabf86dd9ebb452b65b2386f749292676d4b26b719aed63894a4bbf575a9"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.11/undistro_0.36.11_linux_arm64.tar.gz"
-      sha256 "b43c0131a42e5772dfa6be84cb4c27cf895af2885c8a5dcd4b6a70fd56bff321"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.11/undistro_0.36.11_linux_amd64.tar.gz"
-      sha256 "a6110ed16271cddb9db4b625d75ec0c5400b11003b894fbfe50d638951ae630b"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_linux_amd64.tar.gz"
+      sha256 "77cb8d2900ab150eac5ff7684d7a128ba3b07c11d2a347a0cda1b47fec034e9e"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_linux_arm64.tar.gz"
+      sha256 "5f294b918adb95e15b33246c4df77e81ed5f52b63f59aa609cd56b4eda37a2ed"
     end
   end
 
