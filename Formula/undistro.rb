@@ -5,28 +5,28 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.36.12"
+  version "0.36.13"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_darwin_arm64.tar.gz"
-      sha256 "4e00ca7339b393dde5abf972a49dc34a2b8916321eddf8b83613a0d60ecfb7d4"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.13/undistro_0.36.13_darwin_arm64.tar.gz"
+      sha256 "ec2f4d9a34732dbe0359d20cdf993a7aa3acfd2c71152c12344dcb789c69147b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_darwin_amd64.tar.gz"
-      sha256 "1a09dabf86dd9ebb452b65b2386f749292676d4b26b719aed63894a4bbf575a9"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.13/undistro_0.36.13_darwin_amd64.tar.gz"
+      sha256 "92f26254f0573df6e8a8210654ee4d67d03e1a51899ddfd119a2cd67256e8b6e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_linux_amd64.tar.gz"
-      sha256 "77cb8d2900ab150eac5ff7684d7a128ba3b07c11d2a347a0cda1b47fec034e9e"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.13/undistro_0.36.13_linux_amd64.tar.gz"
+      sha256 "63eab07fc66a8f2179055fb8a4ff7f330df7019c1b64dedd065ae87a24d7b3c6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.12/undistro_0.36.12_linux_arm64.tar.gz"
-      sha256 "5f294b918adb95e15b33246c4df77e81ed5f52b63f59aa609cd56b4eda37a2ed"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.13/undistro_0.36.13_linux_arm64.tar.gz"
+      sha256 "663b05bc86e511475bbf06dfc0f71bcff44ef9477c6272c7c7f995d40ca57fb5"
     end
   end
 
