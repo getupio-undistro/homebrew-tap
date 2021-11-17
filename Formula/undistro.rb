@@ -5,20 +5,20 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.36.19"
+  version "0.36.20"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.19/undistro_0.36.19_darwin_amd64.tar.gz"
-      sha256 "9a897c1b49fec8fa9ead95aecab2f1fc8f8cf5f56a321891c0f733567122f447"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.20/undistro_0.36.20_darwin_amd64.tar.gz"
+      sha256 "44570f773feceb83f9c8c13e61de1370c8b4274dacc95472fe29a4e1128edded"
 
       def install
         bin.install "undistro"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.19/undistro_0.36.19_darwin_arm64.tar.gz"
-      sha256 "315a56642ec46beb945f112d446b62c508b1783ff6512d7142d25dfc6bc32e86"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.20/undistro_0.36.20_darwin_arm64.tar.gz"
+      sha256 "5d8e49423fafd475a5a4547ea88f69b56fc3907642481c28ff2e1fc02d9f3bd9"
 
       def install
         bin.install "undistro"
@@ -28,16 +28,16 @@ class Undistro < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.19/undistro_0.36.19_linux_amd64.tar.gz"
-      sha256 "b77e3426d8cf36920f1ce3caa7e08fecf030dca80be6b61f9c8bb5632b162e8c"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.20/undistro_0.36.20_linux_amd64.tar.gz"
+      sha256 "f14304db105c7dc01e58130271ece8dcfa670436aec581e6962c715d7532144d"
 
       def install
         bin.install "undistro"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.19/undistro_0.36.19_linux_arm64.tar.gz"
-      sha256 "2aeda0c14c24f80c60a34255907f1d80c992b0fc374eb4c2ba24c9d73cbcbb5a"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.36.20/undistro_0.36.20_linux_arm64.tar.gz"
+      sha256 "b926f9f7d044bbd888d2d3505f00218de92bb4e3d8b72aa1a6073636f9a02639"
 
       def install
         bin.install "undistro"
