@@ -10,7 +10,7 @@ class Undistro < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/getupio-undistro/undistro/releases/download/v0.37.1/undistro_0.37.1_darwin_arm64.tar.gz"
-      sha256 "efa4cae7d61bcba6a21bda0bd73377ab1661db979e7a96214dd25d86437029af"
+      sha256 "65f07ac00d2ed448e2884d17d5c13711841f93d09f109258b82f6733f40da93c"
 
       def install
         bin.install "undistro"
@@ -18,7 +18,7 @@ class Undistro < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/getupio-undistro/undistro/releases/download/v0.37.1/undistro_0.37.1_darwin_amd64.tar.gz"
-      sha256 "5856ec75a6ec97ce759d98f8070a8ea1f43a510bd085529598fedb8c60b605f2"
+      sha256 "86881ca1af8aacfa7149bab99ccda03638ac8516631048ca371f62b86e172303"
 
       def install
         bin.install "undistro"
@@ -29,7 +29,7 @@ class Undistro < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/getupio-undistro/undistro/releases/download/v0.37.1/undistro_0.37.1_linux_arm64.tar.gz"
-      sha256 "6018c8841dc88018c99cd52883796fe1143620a5dd2bb3b3ed334733cb024f54"
+      sha256 "29711ceceaf8eef838a85ca40af53a1c484cb57d7ae0e5ed07b68fcf51ed489c"
 
       def install
         bin.install "undistro"
@@ -37,7 +37,7 @@ class Undistro < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/getupio-undistro/undistro/releases/download/v0.37.1/undistro_0.37.1_linux_amd64.tar.gz"
-      sha256 "2b10534a9a356783b8eabd251d8d28423a17f5d9f1ca3e5ab98489c7a3dacd31"
+      sha256 "6714abd27d02c9bd3158c6c92439c2716a3ad6e3ad1d6fcd58923a196557f788"
 
       def install
         bin.install "undistro"
