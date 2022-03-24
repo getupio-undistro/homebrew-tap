@@ -5,20 +5,20 @@
 class Undistro < Formula
   desc "UnDistro is a vanilla, non-opinionated, and open source Kubernetes distribution"
   homepage "https://undistro.io"
-  version "0.38.1-alpha1"
+  version "0.38.2-alpha1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.1-alpha1/undistro_0.38.1-alpha1_darwin_arm64.tar.gz"
-      sha256 "2dcc3b4c80826b4d8213963322c48fe326caab1feb9c7b6acbd4328b286b6c47"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.2-alpha1/undistro_0.38.2-alpha1_darwin_arm64.tar.gz"
+      sha256 "066d46bb63b9597a3cf047b56c456c498ac3298cf196526fb4921053cf4b1bb6"
 
       def install
         bin.install "undistro"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.1-alpha1/undistro_0.38.1-alpha1_darwin_amd64.tar.gz"
-      sha256 "42fcf7af3164c30db14d89246a9e443d60072a5e8ae1d0fa315f8abcc3a1448a"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.2-alpha1/undistro_0.38.2-alpha1_darwin_amd64.tar.gz"
+      sha256 "2f67c1d18b75642d6092de2851812aebf7d1b4da0469a7fcd32de5d3d48ac90f"
 
       def install
         bin.install "undistro"
@@ -28,16 +28,16 @@ class Undistro < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.1-alpha1/undistro_0.38.1-alpha1_linux_amd64.tar.gz"
-      sha256 "d98924530667d57650b0ad2d0902ed2a5ed75dc0f42c293f8c9f994bae35708e"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.2-alpha1/undistro_0.38.2-alpha1_linux_amd64.tar.gz"
+      sha256 "acc6b2e82e242640402dc29ca67705701f80fabb15979994b7f7edb090b8d60e"
 
       def install
         bin.install "undistro"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.1-alpha1/undistro_0.38.1-alpha1_linux_arm64.tar.gz"
-      sha256 "577d602a8f8cd2d3ff04cb7f80461c5064cc6b29fa4c6b6f83afa42b961fb13f"
+      url "https://github.com/getupio-undistro/undistro/releases/download/v0.38.2-alpha1/undistro_0.38.2-alpha1_linux_arm64.tar.gz"
+      sha256 "0a203fdfe75295502ddd561bf290c8c09074d1710dd85ce35b8071219b16e984"
 
       def install
         bin.install "undistro"
